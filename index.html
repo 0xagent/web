@@ -10,10 +10,13 @@
     <script src="https://use.fontawesome.com/681424a4d3.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Red+Hat Display&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <script>
+        function onSubmit(token) {
+          document.getElementById("contactform").submit();
+        }
+      </script>
     <link href="static/css/index.css" rel="stylesheet">
 </head>
-<!-- agent. agent. agent. script as background to section -->
 
 <body>
     <section class="panel hero-section section-padding" data-color="hero">
@@ -39,7 +42,6 @@
                 <h1 class="hero-text"><span class="hero-text-heavy">trust,</span> <br> <span class="hero-text-light">as
                         a service.<span></h1>
                 <p class="muted-text">Blockchain experts for all your crypto needs.</p>
-                <!-- <a href = "/about" class="btn btn-outline classic-btn">learn more</a> -->
             </div>
             <div class="hero-image-section">
                 <img class="hero-image" src="static/images/hero.png">
@@ -193,8 +195,8 @@
         <h1 class="section-title">contact us.</h1>
         <div class="section-page contact-page">
 
-            <form action="https://submit-form.com/fsuhYDuz">
-                <!-- <input type="hidden" name="_redirect" value="https://agent.com" /> -->
+            <form id="contactform" action="https://submit-form.com/fsuhYDuz">
+                <input type="hidden" name="_redirect" value="https://agent.com" />
                 <div class="row col-sm-12">
                     <div class="mb-3 col-sm-6">
                         <label for="name" class="form-label">Full Name (or Display Name)</label>
@@ -234,10 +236,10 @@
                         <textarea name="additional_info" class="form-control" id="additionalinfo" rows="3"></textarea>
                     </div>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lf9amodAAAAAD8MElsS5D5VI597UL0ErDOYcgf6"></div>
-      <br/>
+                <!-- <div class="g-recaptcha" data-sitekey="6Lf9amodAAAAAD8MElsS5D5VI597UL0ErDOYcgf6"></div>
+      <br/> -->
                 <div class="row col-sm-12">
-                    <button type="submit" class="btn sign-up col-sm-4 mx-auto mt-3">SIGN UP FOR AGENT</button>
+                    <button data-sitekey="6Lf9amodAAAAAD8MElsS5D5VI597UL0ErDOYcgf6" data-callback='onSubmit' type="submit" class="g-recaptcha btn sign-up col-sm-4 mx-auto mt-3">SIGN UP FOR AGENT</button>
                 </div>
             </form>
 
