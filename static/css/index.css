@@ -596,7 +596,7 @@ header .contact-li:hover {
   display: table-cell;
   vertical-align: middle;
   width: 100vw;
-  display: none;
+  visibility: hidden;
 }
 
 .toast-text {
@@ -605,6 +605,7 @@ header .contact-li:hover {
   text-align: center;
   height: fit-content;
 }
-.show{
-  display: block!important;
+
+.show {
+  visibility: visible !important;
 }
