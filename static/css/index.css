@@ -69,9 +69,7 @@
   transition: background-color 0.6s ease;
 }
 
-body {
-  padding-top: 1rem;
-}
+body {}
 
 
 .section-page {
@@ -588,4 +586,25 @@ header .contact-li:hover {
   /* margin-left: 2rem; */
 
   /* z-index: 90; */
+}
+
+.form-received {
+  height: 2rem;
+  background-color: rgba(102, 185, 217, 1);
+  color: white;
+  font-family: "metropolis";
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  display: none;
+}
+
+.toast-text {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  height: fit-content;
+}
+.show{
+  display: block!important;
 }
